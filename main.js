@@ -39,7 +39,7 @@ function adicionaLinha(){
         linha += `<td> ${inputNotaAtividade.value} </td>`;
         linha += `<td> ${inputNotaAtividade.value >=notaMinima ? imgAprovado : imgReprovado} </td>`;
         linha += "</tr>";
-        
+
         linhas += linha;    
     }
 
@@ -54,7 +54,7 @@ function atualizarTabela(){
 function atualizarMediaFinal(){
     const mediaFinal = calculaMediaFinal();
     
-    document.getElementById('media-final-valor').innerHTML = mediaFinal;
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2);
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado; 
 
 }
